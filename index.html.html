@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gana Sami — Information Security &amp; AI Automation Engineer</title>
+<meta name="description" content="Portfolio of Gana Sami, an information security and AI automation engineer.">
+<meta name="theme-color" content="#12151b">
+<meta name="color-scheme" content="dark">
+<meta property="og:title" content="Gana Sami — Information Security &amp; AI Automation Engineer">
+<meta property="og:description" content="Portfolio of Gana Sami, an information security and AI automation engineer  based in Constantine, Algeria.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%2312151b'/%3E%3Ctext x='16' y='22' font-family='Georgia,serif' font-size='15' fill='%23d6963f' text-anchor='middle'%3EGS%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300..600&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #12151b;
+    --surface: #1a1e27;
+    --surface-2: #20242f;
+    --text: #edece7;
+    --text-muted: #8d93a1;
+    --text-faint: #5b6270;
+    --accent: #d6963f;
+    --accent-soft: rgba(214, 150, 63, 0.14);
+    --border: rgba(237, 236, 231, 0.10);
+    --border-strong: rgba(237, 236, 231, 0.20);
+    --font-serif: 'Fraunces', Georgia, 'Times New Roman', serif;
+    --font-sans: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --font-mono: 'IBM Plex Mono', 'SFMono-Regular', Consolas, monospace;
+    --edge-w: min(92vw, 1180px);
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--font-sans);
+    font-size: 16px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  img, svg { display: block; max-width: 100%; }
+  a { color: inherit; text-decoration: none; }
+  button { font: inherit; color: inherit; background: none; border: none; cursor: pointer; }
+  ul { list-style: none; }
+  h1, h2, h3 { font-weight: 500; line-height: 1.2; }
+
+  ::selection { background: var(--accent-soft); color: var(--text); }
+
+  :focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
+  .wrap {
+    width: var(--edge-w);
+    margin-inline: auto;
+  }
+
+  .section {
+    padding-block: clamp(3.5rem, 8vw, 7rem);
+    border-top: 1px solid var(--border);
+  }
+
+  .section-head {
+    max-width: 46ch;
+    margin-bottom: clamp(2rem, 5vw, 3rem);
+  }
+
+  .section-head h2 {
+    font-family: var(--font-serif);
+    font-size: clamp(1.6rem, 3vw, 2.1rem);
+    font-weight: 500;
+    letter-spacing: -0.01em;
+    margin-bottom: 0.6rem;
+  }
+
+  .section-head p {
+    color: var(--text-muted);
+    font-size: 1rem;
+    max-width: 52ch;
+  }
+
+  /* ---------- Header ---------- */
+
+  .site-header {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.15rem clamp(1.25rem, 4vw, 3rem);
+    background: transparent;
+    border-bottom: 1px solid transparent;
+    transition: background-color .35s ease, border-color .35s ease, backdrop-filter .35s ease;
+  }
+
+  .site-header.is-scrolled {
+    background: rgba(18, 21, 27, 0.86);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom-color: var(--border);
+  }
+
+  .logo {
+    font-family: var(--font-serif);
+    font-size: 1.15rem;
+    font-weight: 500;
+    letter-spacing: -0.01em;
+  }
+
+  .site-nav { display: flex; align-items: center; gap: 2.1rem; }
+
+  .nav-link {
+    font-size: 0.93rem;
+    color: var(--text-muted);
+    padding-bottom: 3px;
+    border-bottom: 1.5px solid transparent;
+    transition: color .2s ease, border-color .2s ease;
+  }
+
+  .nav-link:hover { color: var(--text); }
+  .nav-link.is-active { color: var(--text); border-bottom-color: var(--accent); }
+
+  .header-social { display: flex; align-items: center; gap: 1rem; margin-left: 2.1rem; padding-left: 2.1rem; border-left: 1px solid var(--border); }
+
+  .social-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 22px;
+    height: 22px;
+    color: var(--text-muted);
+    transition: color .2s ease, opacity .2s ease;
+  }
+
+  .social-link:hover { color: var(--text); }
+  .social-link svg { width: 18px; height: 18px; }
+
+  .social-link.is-placeholder { color: var(--text-faint); opacity: 0.55; cursor: default; }
+  .social-link.is-placeholder:hover { color: var(--text-faint); }
+
+  .nav-toggle { display: none; width: 30px; height: 22px; position: relative; }
+  .nav-toggle span, .nav-toggle span::before, .nav-toggle span::after {
+    content: ''; position: absolute; left: 0; width: 100%; height: 1.5px; background: var(--text); transition: transform .25s ease, opacity .25s ease;
+  }
+  .nav-toggle span { top: 50%; transform: translateY(-50%); }
+  .nav-toggle span::before { top: -8px; }
+  .nav-toggle span::after { top: 8px; }
+  .nav-toggle[aria-expanded="true"] span { background: transparent; }
+  .nav-toggle[aria-expanded="true"] span::before { top: 0; transform: rotate(45deg); }
+  .nav-toggle[aria-expanded="true"] span::after { top: 0; transform: rotate(-45deg); }
+
+  .mobile-nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: rgba(18, 21, 27, 0.98);
+    border-bottom: 1px solid var(--border);
+    padding: 0.5rem clamp(1.25rem, 4vw, 2rem) 1.5rem;
+  }
+  .mobile-nav.is-open { display: block; }
+  .mobile-nav a {
+    display: block;
+    padding: 0.85rem 0;
+    font-size: 1rem;
+    color: var(--text-muted);
+    border-bottom: 1px solid var(--border);
+  }
+  .mobile-nav a:hover { color: var(--text); }
+  .mobile-nav-social {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1.1rem;
+    padding-top: 1.1rem;
+    border-top: 1px solid var(--border);
+  }
+
+  /* ---------- Hero ---------- */
+
+  .hero {
+    padding-block: clamp(3rem, 9vw, 6.5rem) clamp(3.5rem, 8vw, 6rem);
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 420px);
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .hero-copy { max-width: 640px; }
+
+  .eyebrow-loc {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin-bottom: 1.4rem;
+  }
+
+  .hero h1 {
+    font-family: var(--font-serif);
+    font-size: clamp(2.15rem, 4.6vw, 3.4rem);
+    font-weight: 500;
+    letter-spacing: -0.015em;
+    line-height: 1.14;
+    margin-bottom: 1.4rem;
+  }
+
+  .hero p.lede {
+    color: var(--text-muted);
+    font-size: clamp(1.02rem, 1.4vw, 1.14rem);
+    max-width: 54ch;
+    margin-bottom: 2.1rem;
+  }
+
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: var(--accent);
+    color: #16130d;
+    font-weight: 600;
+    font-size: 0.97rem;
+    padding: 0.85em 1.5em;
+    border-radius: 6px;
+    transition: background-color .2s ease, transform .2s ease;
+  }
+  .btn-primary:hover { background: #e2a552; transform: translateY(-1px); }
+
+  .hero-graph { display: block; }
+  .hero-graph .edge {
+    stroke: rgba(237, 236, 231, 0.18);
+    stroke-width: 1;
+    fill: none;
+  }
+  .hero-graph .node { fill: var(--text-faint); }
+  .hero-graph .node.is-accent { fill: var(--accent); }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .hero-graph .edge {
+      stroke-dasharray: 480;
+      stroke-dashoffset: 480;
+      animation: draw-edge 1.1s ease-out forwards;
+    }
+    .hero-graph .node {
+      opacity: 0;
+      transform-box: fill-box;
+      transform-origin: center;
+      animation: pop-node .5s ease-out forwards;
+    }
+    @keyframes draw-edge { to { stroke-dashoffset: 0; } }
+    @keyframes pop-node { from { opacity: 0; transform: scale(.4); } to { opacity: 1; transform: scale(1); } }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .hero-graph .edge { stroke-dashoffset: 0; }
+    .hero-graph .node { opacity: 1; }
+  }
+
+  /* ---------- Skills ---------- */
+
+  .skills-list { border-top: 1px solid var(--border); }
+  .skill-row {
+    display: grid;
+    grid-template-columns: minmax(0, 220px) 1fr;
+    gap: 1.5rem;
+    padding: 1.35rem 0;
+    border-bottom: 1px solid var(--border);
+  }
+  .skill-name {
+    font-family: var(--font-serif);
+    font-size: 1.08rem;
+    font-weight: 500;
+  }
+  .skill-desc { color: var(--text-muted); max-width: 56ch; }
+
+  /* ---------- Certifications ---------- */
+
+  .cert-featured {
+    background: var(--surface);
+    border: 1px solid var(--border-strong);
+    border-radius: 8px;
+    padding: clamp(1.6rem, 4vw, 2.4rem);
+    margin-bottom: 2.5rem;
+  }
+
+  .cert-issuer { color: var(--text-muted); font-size: 0.9rem; margin-bottom: 0.5rem; }
+
+  .cert-title-row { display: flex; align-items: center; gap: 0.65rem; margin-bottom: 0.35rem; }
+  .cert-title { font-family: var(--font-serif); font-size: clamp(1.35rem, 2.6vw, 1.7rem); font-weight: 500; }
+  .cert-badge { width: 22px; height: 22px; flex-shrink: 0; color: var(--accent); }
+
+  .cert-path { color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1.6rem; }
+
+  .cert-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.8rem 3rem;
+    padding-top: 1.4rem;
+    border-top: 1px solid var(--border);
+  }
+  .cert-meta dt { font-size: 0.8rem; color: var(--text-faint); margin-bottom: 0.3rem; }
+  .cert-meta dd { font-size: 0.98rem; }
+  .cert-meta dd.mono { font-family: var(--font-mono); font-size: 0.88rem; color: var(--text-muted); }
+
+  .cert-progress-lede { color: var(--text-muted); margin-bottom: 1.3rem; }
+
+  .cert-planned { display: flex; flex-wrap: wrap; gap: 1rem; }
+  .cert-planned-item {
+    flex: 1 1 220px;
+    border: 1.5px dashed var(--border-strong);
+    border-radius: 8px;
+    padding: 1.2rem 1.3rem;
+  }
+  .cert-planned-item .short { font-family: var(--font-serif); font-size: 1.1rem; margin-bottom: 0.3rem; }
+  .cert-planned-item .full { color: var(--text-muted); font-size: 0.9rem; }
+
+  /* ---------- Empty states ---------- */
+
+  .empty-state {
+    border: 1.5px dashed var(--border-strong);
+    border-radius: 8px;
+    padding: clamp(2rem, 5vw, 2.8rem);
+    max-width: 640px;
+  }
+  .empty-state p { color: var(--text-muted); }
+
+  /* ---------- Footer ---------- */
+
+  .site-footer {
+    padding-block: clamp(3rem, 7vw, 5rem);
+    border-top: 1px solid var(--border);
+  }
+  .footer-inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 2rem;
+  }
+  .footer-copy h2 {
+    font-family: var(--font-serif);
+    font-size: clamp(1.4rem, 3vw, 1.9rem);
+    font-weight: 500;
+    margin-bottom: 0.6rem;
+    max-width: 20ch;
+  }
+  .footer-copy p { color: var(--text-muted); max-width: 42ch; }
+  .footer-social { display: flex; gap: 1.3rem; }
+  .footer-social .social-link { width: 26px; height: 26px; }
+  .footer-social .social-link svg { width: 20px; height: 20px; }
+  .footer-bottom {
+    margin-top: clamp(2.5rem, 6vw, 3.5rem);
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    color: var(--text-faint);
+    font-size: 0.85rem;
+  }
+
+  /* ---------- Responsive ---------- */
+
+  @media (max-width: 960px) {
+    .hero { grid-template-columns: 1fr; }
+    .hero-graph { display: none; }
+  }
+
+  @media (max-width: 780px) {
+    .site-nav, .header-social { display: none; }
+    .nav-toggle { display: block; }
+  }
+
+  @media (max-width: 640px) {
+    .skill-row { grid-template-columns: 1fr; gap: 0.4rem; }
+    .cert-meta { gap: 1.4rem 2rem; }
+    .footer-inner { align-items: flex-start; }
+  }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <a href="#top" class="logo">Gana Sami</a>
+
+  <nav class="site-nav" aria-label="Primary">
+    <a class="nav-link" href="#skills">Skills</a>
+    <a class="nav-link" href="#certifications">Certifications</a>
+    <a class="nav-link" href="#projects">Projects</a>
+    <a class="nav-link" href="#labs">Labs</a>
+    <a class="nav-link" href="#contact">Contact</a>
+  </nav>
+
+  <div class="header-social">
+    <a class="social-link" href="https://www.linkedin.com/in/gana-sami-648b4a31a/" target="_blank" rel="noopener" aria-label="LinkedIn">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="2.5"/><line x1="7.5" y1="10.5" x2="7.5" y2="16.5"/><circle cx="7.5" cy="7" r="0.9" fill="currentColor" stroke="none"/><path d="M11.5 16.5v-4a2 2 0 0 1 4 0v4"/><line x1="11.5" y1="10.5" x2="11.5" y2="16.5"/></svg>
+    </a>
+    <!-- Add your GitHub profile URL to this href when ready -->
+    <span class="social-link is-placeholder" aria-disabled="true" title="GitHub — coming soon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2a10 10 0 0 0-3.16 19.5c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.46-1.16-1.11-1.47-1.11-1.47-.9-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.08 2.91.83.09-.65.35-1.08.63-1.33-2.22-.25-4.56-1.11-4.56-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.5 9.5 0 0 1 5 0c1.9-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10 10 0 0 0 12 2z"/></svg>
+    </span>
+    <!-- Add your Twitter/X profile URL to this href when ready -->
+    <span class="social-link is-placeholder" aria-disabled="true" title="Twitter — coming soon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 4l7.5 9.5L4.2 20H6l6.4-5.8L17 20h3l-7.9-10L19.6 4H18l-5.9 5.3L7.1 4H4z"/></svg>
+    </span>
+  </div>
+
+  <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+    <span></span>
+  </button>
+
+  <div class="mobile-nav">
+    <a href="#skills">Skills</a>
+    <a href="#certifications">Certifications</a>
+    <a href="#projects">Projects</a>
+    <a href="#labs">Labs</a>
+    <a href="#contact">Contact</a>
+    <div class="mobile-nav-social">
+      <a class="social-link" href="https://www.linkedin.com/in/gana-sami-648b4a31a/" target="_blank" rel="noopener" aria-label="LinkedIn">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="2.5"/><line x1="7.5" y1="10.5" x2="7.5" y2="16.5"/><circle cx="7.5" cy="7" r="0.9" fill="currentColor" stroke="none"/><path d="M11.5 16.5v-4a2 2 0 0 1 4 0v4"/><line x1="11.5" y1="10.5" x2="11.5" y2="16.5"/></svg>
+      </a>
+      <span class="social-link is-placeholder" aria-disabled="true" title="GitHub — coming soon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2a10 10 0 0 0-3.16 19.5c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.46-1.16-1.11-1.47-1.11-1.47-.9-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.08 2.91.83.09-.65.35-1.08.63-1.33-2.22-.25-4.56-1.11-4.56-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.5 9.5 0 0 1 5 0c1.9-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10 10 0 0 0 12 2z"/></svg>
+      </span>
+      <span class="social-link is-placeholder" aria-disabled="true" title="Twitter — coming soon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 4l7.5 9.5L4.2 20H6l6.4-5.8L17 20h3l-7.9-10L19.6 4H18l-5.9 5.3L7.1 4H4z"/></svg>
+      </span>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="hero wrap">
+    <div class="hero-copy">
+      <p class="eyebrow-loc">Constantine, Algeria</p>
+      <h1>Information security &amp; AI Automation Engineer</h1>
+      <p class="lede">Information security and AI automation student learning to secure systems and build the software behind them.</p>
+      <a class="btn-primary" href="https://www.linkedin.com/in/gana-sami-648b4a31a/" target="_blank" rel="noopener">Connect on LinkedIn</a>
+    </div>
+
+    <svg class="hero-graph" viewBox="0 0 640 560" aria-hidden="true">
+      <g class="edges">
+        <line class="edge" x1="470" y1="60"  x2="560" y2="100" style="animation-delay:0.00s"/>
+        <line class="edge" x1="470" y1="60"  x2="410" y2="130" style="animation-delay:0.06s"/>
+        <line class="edge" x1="560" y1="100" x2="540" y2="175" style="animation-delay:0.12s"/>
+        <line class="edge" x1="410" y1="130" x2="540" y2="175" style="animation-delay:0.18s"/>
+        <line class="edge" x1="410" y1="130" x2="350" y2="190" style="animation-delay:0.24s"/>
+        <line class="edge" x1="540" y1="175" x2="555" y2="265" style="animation-delay:0.30s"/>
+        <line class="edge" x1="350" y1="190" x2="460" y2="240" style="animation-delay:0.36s"/>
+        <line class="edge" x1="540" y1="175" x2="460" y2="240" style="animation-delay:0.42s"/>
+        <line class="edge" x1="460" y1="240" x2="555" y2="265" style="animation-delay:0.48s"/>
+        <line class="edge" x1="350" y1="190" x2="300" y2="280" style="animation-delay:0.54s"/>
+        <line class="edge" x1="460" y1="240" x2="410" y2="330" style="animation-delay:0.60s"/>
+        <line class="edge" x1="555" y1="265" x2="520" y2="350" style="animation-delay:0.66s"/>
+        <line class="edge" x1="300" y1="280" x2="410" y2="330" style="animation-delay:0.72s"/>
+        <line class="edge" x1="410" y1="330" x2="520" y2="350" style="animation-delay:0.78s"/>
+        <line class="edge" x1="410" y1="330" x2="360" y2="400" style="animation-delay:0.84s"/>
+        <line class="edge" x1="520" y1="350" x2="460" y2="430" style="animation-delay:0.90s"/>
+        <line class="edge" x1="360" y1="400" x2="460" y2="430" style="animation-delay:0.96s"/>
+      </g>
+      <g class="nodes">
+        <circle class="node"          cx="470" cy="60"  r="3.5" style="animation-delay:0.55s"/>
+        <circle class="node"          cx="560" cy="100" r="3"   style="animation-delay:0.68s"/>
+        <circle class="node is-accent" cx="410" cy="130" r="4.5" style="animation-delay:0.50s"/>
+        <circle class="node"          cx="540" cy="175" r="3"   style="animation-delay:0.75s"/>
+        <circle class="node"          cx="350" cy="190" r="3.5" style="animation-delay:0.60s"/>
+        <circle class="node is-accent" cx="460" cy="240" r="4.5" style="animation-delay:0.82s"/>
+        <circle class="node"          cx="555" cy="265" r="3"   style="animation-delay:0.90s"/>
+        <circle class="node"          cx="300" cy="280" r="3"   style="animation-delay:0.65s"/>
+        <circle class="node"          cx="410" cy="330" r="4"   style="animation-delay:1.00s"/>
+        <circle class="node"          cx="520" cy="350" r="3"   style="animation-delay:1.05s"/>
+        <circle class="node is-accent" cx="360" cy="400" r="3.5" style="animation-delay:1.10s"/>
+        <circle class="node"          cx="460" cy="430" r="3"   style="animation-delay:1.15s"/>
+      </g>
+    </svg>
+  </section>
+
+  <section id="skills" class="section skills">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>What I work with</h2>
+        <p>Tools and fundamentals I've put real hours into, on labs and machines of my own.</p>
+      </div>
+
+      <div class="skills-list">
+        <div class="skill-row">
+          <div class="skill-name">Nmap</div>
+          <div class="skill-desc">Network discovery and port scanning for reconnaissance.</div>
+        </div>
+        <div class="skill-row">
+          <div class="skill-name">SIEM</div>
+          <div class="skill-desc">Centralized log monitoring and threat detection.</div>
+        </div>
+        <div class="skill-row">
+          <div class="skill-name">Metasploit</div>
+          <div class="skill-desc">Exploitation framework for vulnerability testing.</div>
+        </div>
+        <div class="skill-row">
+          <div class="skill-name">Burp Suite</div>
+          <div class="skill-desc">Web application security testing.</div>
+        </div>
+        <div class="skill-row">
+          <div class="skill-name">Cryptography</div>
+          <div class="skill-desc">Encryption, hashing, and secure protocol design.</div>
+        </div>
+        <div class="skill-row">
+          <div class="skill-name">Networking</div>
+          <div class="skill-desc">TCP/IP, routing, and protocol analysis.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="certifications" class="section certifications">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Certifications</h2>
+      </div>
+
+      <div class="cert-featured">
+        <p class="cert-issuer">TryHackMe</p>
+        <div class="cert-title-row">
+          <h3 class="cert-title">Cyber Security 101</h3>
+          <svg class="cert-badge" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+            <circle cx="12" cy="12" r="9.5"/>
+            <path d="M8 12.3l2.6 2.6L16.2 9"/>
+          </svg>
+        </div>
+        <p class="cert-path">Learning path</p>
+
+        <dl class="cert-meta">
+          <div>
+            <dt>Awarded to</dt>
+            <dd>GANA SAMI</dd>
+          </div>
+          <div>
+            <dt>Completed</dt>
+            <dd>3rd September 2026</dd>
+          </div>
+          <div>
+            <dt>Duration</dt>
+            <dd>45 hours 23 minutes</dd>
+          </div>
+          <div>
+            <dt>Credential ID</dt>
+            <dd class="mono">THM-LCVBEGSIHT</dd>
+          </div>
+        </dl>
+      </div>
+
+      <p class="cert-progress-lede">Currently working toward:</p>
+      <div class="cert-planned">
+        <div class="cert-planned-item">
+          <p class="short">BTL1</p>
+          <p class="full">Security Blue Team Level 1</p>
+        </div>
+        <div class="cert-planned-item">
+          <p class="short">Security+</p>
+          <p class="full">CompTIA Security+</p>
+        </div>
+        <div class="cert-planned-item">
+          <p class="short">CCNA</p>
+          <p class="full">Cisco Certified Network Associate</p>
+        </div>
+        <div class="cert-planned-item">
+          <p class="short">CYSA+</p>
+          <p class="full">Certified CyberSecurirty Analyst</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects" class="section projects">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Projects</h2>
+      </div>
+      <!--
+        Add project cards here as you ship them. A simple pattern to copy:
+        <article class="project-card">
+          <h3>Project name</h3>
+          <p>One or two lines on what it does and why you built it.</p>
+        </article>
+      -->
+      <div class="empty-state">
+        <p>Nothing published yet. New builds will land here as they ship.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="labs" class="section labs">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Labs</h2>
+      </div>
+      <!-- Add lab write-ups / CTF walkthroughs here in the same pattern as Projects above. -->
+      <div class="empty-state">
+        <p>No write-ups yet. Lab notes and CTF walkthroughs will be added here as they're completed.</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer id="contact" class="site-footer">
+  <div class="wrap">
+    <div class="footer-inner">
+      <div class="footer-copy">
+        <h2>Open to connecting.</h2>
+        <p>Reach out on LinkedIn — I'm always glad to talk security, AI, or both.</p>
+      </div>
+      <div class="footer-social">
+        <a class="social-link" href="https://www.linkedin.com/in/gana-sami-648b4a31a/" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="2.5"/><line x1="7.5" y1="10.5" x2="7.5" y2="16.5"/><circle cx="7.5" cy="7" r="0.9" fill="currentColor" stroke="none"/><path d="M11.5 16.5v-4a2 2 0 0 1 4 0v4"/><line x1="11.5" y1="10.5" x2="11.5" y2="16.5"/></svg>
+        </a>
+        <!-- Add your GitHub profile URL to this href when ready -->
+        <span class="social-link is-placeholder" aria-disabled="true" title="GitHub — coming soon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2a10 10 0 0 0-3.16 19.5c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.46-1.16-1.11-1.47-1.11-1.47-.9-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.08 2.91.83.09-.65.35-1.08.63-1.33-2.22-.25-4.56-1.11-4.56-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.5 9.5 0 0 1 5 0c1.9-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10 10 0 0 0 12 2z"/></svg>
+        </span>
+        <!-- Add your Twitter/X profile URL to this href when ready -->
+        <span class="social-link is-placeholder" aria-disabled="true" title="Twitter — coming soon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 4l7.5 9.5L4.2 20H6l6.4-5.8L17 20h3l-7.9-10L19.6 4H18l-5.9 5.3L7.1 4H4z"/></svg>
+        </span>
+      </div>
+    </div>
+    <div class="footer-bottom">© Gana Sami</div>
+  </div>
+</footer>
+
+<script>
+(function () {
+  var header = document.querySelector('.site-header');
+  function onScroll() {
+    if (window.scrollY > 24) header.classList.add('is-scrolled');
+    else header.classList.remove('is-scrolled');
+  }
+  onScroll();
+  window.addEventListener('scroll', onScroll, { passive: true });
+
+  var toggle = document.querySelector('.nav-toggle');
+  var mobileNav = document.querySelector('.mobile-nav');
+  if (toggle && mobileNav) {
+    toggle.addEventListener('click', function () {
+      var isOpen = mobileNav.classList.toggle('is-open');
+      toggle.setAttribute('aria-expanded', String(isOpen));
+    });
+    mobileNav.querySelectorAll('a').forEach(function (link) {
+      link.addEventListener('click', function () {
+        mobileNav.classList.remove('is-open');
+        toggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+  }
+
+  var sections = document.querySelectorAll('main section[id], footer[id]');
+  var navLinks = document.querySelectorAll('.nav-link');
+  if ('IntersectionObserver' in window && sections.length) {
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          var id = entry.target.getAttribute('id');
+          navLinks.forEach(function (link) {
+            link.classList.toggle('is-active', link.getAttribute('href') === '#' + id);
+          });
+        }
+      });
+    }, { rootMargin: '-45% 0px -45% 0px', threshold: 0 });
+    sections.forEach(function (section) { observer.observe(section); });
+  }
+})();
+</script>
+
+</body>
+</html>
